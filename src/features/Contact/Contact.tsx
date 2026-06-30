@@ -1,5 +1,10 @@
-import { EnvelopeSimple, GithubLogo, Phone, ArrowRight } from '@phosphor-icons/react/dist/ssr'
-import SectionTitle from '@/components/ui/SectionTitle'
+import {
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  PhoneIcon,
+  ArrowRightIcon,
+} from '@phosphor-icons/react/dist/ssr'
+import { SectionTitle } from '@/shared/ui'
 import styles from './Contact.module.css'
 
 type ColorKey = 'blue' | 'purple' | 'green'
@@ -17,7 +22,7 @@ const contactLinks: Array<{
     value: 'jorgegonzalezvillagran97@gmail.com',
     href: 'mailto:jorgegonzalezvillagran97@gmail.com',
     color: 'blue',
-    Icon: EnvelopeSimple,
+    Icon: EnvelopeSimpleIcon,
   },
   {
     label: 'GitHub',
@@ -25,14 +30,14 @@ const contactLinks: Array<{
     href: 'https://github.com/jorgeignacio97',
     color: 'purple',
     external: true,
-    Icon: GithubLogo,
+    Icon: GithubLogoIcon,
   },
   {
     label: 'Teléfono',
     value: '+56 9 3724 1614',
     href: 'tel:+56937241614',
     color: 'green',
-    Icon: Phone,
+    Icon: PhoneIcon,
   },
 ]
 
@@ -61,7 +66,7 @@ export default function Contact() {
                 <p className={styles.label}>{label}</p>
                 <p className={styles.value}>{value}</p>
               </div>
-              <ArrowRight size={16} className={styles.arrow} />
+              <ArrowRightIcon size={16} className={styles.arrow} />
             </a>
           ))}
         </div>

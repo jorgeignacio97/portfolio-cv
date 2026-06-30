@@ -1,6 +1,6 @@
 import styles from './TimelineItem.module.css'
 
-interface TimelineItemProps {
+type TimelineItemProps = {
   company: string
   role: string
   period: string

@@ -1,6 +1,6 @@
 import styles from './ProjectCard.module.css'
 
-interface ProjectCardProps {
+type ProjectCardProps = {
   title: string
   description: string
   tech: string[]

@@ -1,5 +1,5 @@
 import { GraduationCap, Certificate } from '@phosphor-icons/react/dist/ssr'
-import SectionTitle from '@/components/ui/SectionTitle'
+import { SectionTitle } from '@/shared/ui'
 import styles from './Education.module.css'
 
 export default function Education() {
@@ -17,7 +17,9 @@ export default function Education() {
                 <h3 className={styles.cardTitle}>
                   Técnico de Nivel Superior Analista Programador
                 </h3>
-                <p className={`${styles.institution} ${styles.institutionAccent}`}>
+                <p
+                  className={`${styles.institution} ${styles.institutionAccent}`}
+                >
                   Instituto Profesional Santo Tomás
                 </p>
                 <p className={styles.cardMeta}>2018 – 2021 · Temuco, Chile</p>

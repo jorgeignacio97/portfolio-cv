@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Outfit, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/layout/NavBar'
+import { NavBar, Footer } from '@/shared/components/layout'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -30,16 +30,16 @@ export default function RootLayout({
       lang="es"
       className={`${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
       <body className="bg-base text-text flex min-h-full flex-col">
         <NavBar />
         {children}
-        <footer className="border-overlay border-t px-6 py-8 text-center">
-          <p className="text-subtext font-mono text-xs">
-            © 2026 Jorge González · Construido con{' '}
-            <span className="text-blue">Next.js</span> &{' '}
-            <span className="text-purple">Tailwind CSS</span>
-          </p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

@@ -1,5 +1,4 @@
-import SectionTitle from '@/components/ui/SectionTitle'
-import ProjectCard from '@/components/ui/ProjectCard'
+import { SectionTitle, ProjectCard } from '@/shared/ui'
 import styles from './Projects.module.css'
 
 const projects = [

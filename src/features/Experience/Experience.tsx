@@ -1,5 +1,4 @@
-import SectionTitle from '@/components/ui/SectionTitle'
-import TimelineItem from '@/components/ui/TimelineItem'
+import { SectionTitle, TimelineItem } from '@/shared/ui'
 import styles from './Experience.module.css'
 
 const experiences = [

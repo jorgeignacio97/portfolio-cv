@@ -1,5 +1,4 @@
-import SectionTitle from '@/components/ui/SectionTitle'
-import SkillBadge from '@/components/ui/SkillBadge'
+import { SectionTitle, SkillBadge } from '@/shared/ui'
 import styles from './Skills.module.css'
 
 type BadgeVariant = 'blue' | 'purple' | 'green' | 'cyan' | 'peach'
@@ -83,7 +82,11 @@ export default function Skills() {
               <h3 className={styles.category}>{group.category}</h3>
               <div className={styles.badges}>
                 {group.skills.map((skill) => (
-                  <SkillBadge key={skill} name={skill} variant={group.variant} />
+                  <SkillBadge
+                    key={skill}
+                    name={skill}
+                    variant={group.variant}
+                  />
                 ))}
               </div>
             </div>

@@ -1,10 +1,10 @@
-import Hero from '@/components/sections/Hero'
-import About from '@/components/sections/About'
-import Skills from '@/components/sections/Skills'
-import Experience from '@/components/sections/Experience'
-import Projects from '@/components/sections/Projects'
-import Education from '@/components/sections/Education'
-import Contact from '@/components/sections/Contact'
+import About from '@/features/About'
+import Contact from '@/features/Contact'
+import Education from '@/features/Education'
+import Experience from '@/features/Experience'
+import Hero from '@/features/Hero'
+import Projects from '@/features/Projects'
+import Skills from '@/features/Skills'
 
 export default function Home() {
   return (
