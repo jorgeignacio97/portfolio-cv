@@ -17,16 +17,3 @@ npm run dev
 ```
 
 Abre [http://localhost:3000](http://localhost:3000).
-
-## Estructura
-
-```
-src/
-  app/           # layout, globals.css, page.tsx
-  components/
-    layout/      # NavBar
-    sections/    # Hero, About, Skills, Experience, Projects, Education, Contact
-    ui/          # SectionTitle, SkillBadge, ProjectCard, TimelineItem
-public/
-  profile.png
-```
