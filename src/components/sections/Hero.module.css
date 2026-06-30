@@ -1,0 +1,114 @@
+@reference "tailwindcss";
+
+.section {
+  @apply flex min-h-screen items-center justify-center px-6 pt-20;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-6xl;
+}
+
+.layout {
+  @apply flex flex-col-reverse items-center justify-between gap-12 md:flex-row;
+}
+
+/* Text column */
+.text {
+  @apply flex-1 text-center md:text-left;
+}
+
+.greeting {
+  @apply font-mono text-sm mb-4 tracking-widest uppercase;
+  color: var(--c-accent);
+}
+
+.name {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight;
+  background: linear-gradient(to right, var(--c-accent), var(--c-accent-alt));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.role {
+  @apply font-mono text-lg md:text-xl mb-6;
+  color: var(--c-muted);
+}
+
+.bio {
+  @apply max-w-xl mb-10 leading-relaxed;
+  color: var(--c-muted);
+}
+
+.actions {
+  @apply flex flex-wrap justify-center gap-4 md:justify-start;
+}
+
+.btnPrimary {
+  @apply rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-200;
+  background-color: var(--c-accent);
+  color: var(--c-bg);
+}
+
+.btnPrimary:hover {
+  background-color: color-mix(in srgb, var(--c-accent) 85%, #000);
+}
+
+.btnGithub {
+  @apply flex items-center gap-2 rounded-lg border px-6 py-3 text-sm font-semibold transition-all duration-200;
+  border-color: color-mix(in srgb, var(--c-accent) 40%, transparent);
+  color: var(--c-accent);
+}
+
+.btnGithub:hover {
+  background-color: color-mix(in srgb, var(--c-accent) 10%, transparent);
+}
+
+.btnContact {
+  @apply rounded-lg border px-6 py-3 text-sm font-semibold transition-all duration-200;
+  border-color: var(--c-border);
+  color: var(--c-muted);
+}
+
+.btnContact:hover {
+  border-color: color-mix(in srgb, var(--c-accent-alt) 40%, transparent);
+  color: var(--c-accent-alt);
+}
+
+/* Photo column */
+.photoWrap {
+  @apply flex-shrink-0;
+}
+
+.photoFrame {
+  @apply relative h-48 w-48 md:h-64 md:w-64;
+}
+
+.photoGlow {
+  @apply absolute inset-0 rounded-full blur-2xl;
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--c-accent) 30%, transparent),
+    color-mix(in srgb, var(--c-accent-alt) 30%, transparent)
+  );
+}
+
+.photoRing {
+  @apply relative h-full w-full overflow-hidden rounded-full;
+  border: 2px solid color-mix(in srgb, var(--c-accent) 40%, transparent);
+  background-color: var(--c-bg-raised);
+}
+
+/* Scroll cue */
+.scrollCue {
+  @apply mt-16 flex justify-center;
+}
+
+.scrollLink {
+  @apply animate-bounce transition-colors;
+  color: var(--c-muted);
+}
+
+.scrollLink:hover {
+  color: var(--c-accent);
+}

@@ -1,42 +1,60 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* ── Paleta base — Catppuccin Mocha ─────────────────── */
 @theme {
-  --color-base:    #1a1b2e;
-  --color-mantle:  #13141f;
-  --color-surface: #24253e;
-  --color-overlay: #313244;
-  --color-text:    #cdd6f4;
-  --color-subtext: #a9b1d6;
-  --color-blue:    #7aa2f7;
-  --color-purple:  #bb9af7;
-  --color-cyan:    #7dcfff;
-  --color-green:   #9ece6a;
-  --color-peach:   #fab387;
-  --color-red:     #f7768e;
+  --color-base: #1e1e2e;
+  --color-mantle: #181825;
+  --color-surface: #313244;
+  --color-overlay: #45475a;
+  --color-text: #cdd6f4;
+  --color-subtext: #a6adc8;
+  --color-blue: #89b4fa;
+  --color-purple: #cba6f7;
+  --color-cyan: #89dceb;
+  --color-green: #a6e3a1;
+  --color-peach: #fab387;
+  --color-red: #f38ba8;
 
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-jetbrains-mono);
 }
 
+/* ── Tokens semánticos ───────────────────────────────── */
+:root {
+  --c-accent: var(--color-blue);
+  --c-accent-alt: var(--color-purple);
+  --c-success: var(--color-green);
+  --c-info: var(--color-cyan);
+  --c-warn: var(--color-peach);
+  --c-danger: var(--color-red);
+  --c-text: var(--color-text);
+  --c-muted: var(--color-subtext);
+  --c-bg: var(--color-base);
+  --c-bg-raised: var(--color-surface);
+  --c-bg-subtle: var(--color-mantle);
+  --c-border: var(--color-overlay);
+}
+
+/* ── Base ────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #1a1b2e;
-  color: #cdd6f4;
+  background-color: var(--c-bg);
+  color: var(--c-text);
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #13141f;
+  background: var(--c-bg-subtle);
 }
 ::-webkit-scrollbar-thumb {
-  background: #313244;
+  background: var(--c-border);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7aa2f7;
+  background: var(--c-accent);
 }

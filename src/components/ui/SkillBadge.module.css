@@ -1,0 +1,52 @@
+@reference "tailwindcss";
+
+.badge {
+  @apply inline-block rounded-md px-3 py-1.5 font-mono text-xs;
+  border: 1px solid;
+  transition: background-color 200ms;
+}
+
+.blue {
+  color: var(--color-blue);
+  background-color: color-mix(in srgb, var(--color-blue) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-blue) 30%, transparent);
+}
+.blue:hover {
+  background-color: color-mix(in srgb, var(--color-blue) 20%, transparent);
+}
+
+.purple {
+  color: var(--color-purple);
+  background-color: color-mix(in srgb, var(--color-purple) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-purple) 30%, transparent);
+}
+.purple:hover {
+  background-color: color-mix(in srgb, var(--color-purple) 20%, transparent);
+}
+
+.green {
+  color: var(--color-green);
+  background-color: color-mix(in srgb, var(--color-green) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-green) 30%, transparent);
+}
+.green:hover {
+  background-color: color-mix(in srgb, var(--color-green) 20%, transparent);
+}
+
+.cyan {
+  color: var(--color-cyan);
+  background-color: color-mix(in srgb, var(--color-cyan) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-cyan) 30%, transparent);
+}
+.cyan:hover {
+  background-color: color-mix(in srgb, var(--color-cyan) 20%, transparent);
+}
+
+.peach {
+  color: var(--color-peach);
+  background-color: color-mix(in srgb, var(--color-peach) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-peach) 30%, transparent);
+}
+.peach:hover {
+  background-color: color-mix(in srgb, var(--color-peach) 20%, transparent);
+}

@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+.section {
+  @apply px-6 py-24;
+  background-color: color-mix(in srgb, var(--c-bg-subtle) 30%, transparent);
+}
+
+.inner {
+  @apply mx-auto max-w-6xl;
+}
+
+.grid {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}

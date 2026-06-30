@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.section {
+  @apply px-6 py-24;
+}
+
+.inner {
+  @apply mx-auto max-w-6xl;
+}
+
+.list {
+  @apply max-w-3xl;
+}

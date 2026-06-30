@@ -1,0 +1,73 @@
+@reference "tailwindcss";
+
+.section {
+  @apply px-6 py-24;
+  background-color: color-mix(in srgb, var(--c-bg-subtle) 30%, transparent);
+}
+
+.inner {
+  @apply mx-auto max-w-6xl;
+}
+
+.lead {
+  @apply leading-relaxed mb-10;
+  color: var(--c-muted);
+}
+
+.list {
+  @apply flex flex-col gap-4;
+}
+
+.link {
+  --accent: var(--c-accent);
+  @apply flex items-center gap-4 rounded-xl border p-5;
+  background-color: var(--c-bg-raised);
+  border-color: var(--c-border);
+  transition: border-color 200ms;
+}
+
+.link.blue   { --accent: var(--color-blue);   }
+.link.purple { --accent: var(--color-purple);  }
+.link.green  { --accent: var(--color-green);   }
+
+.link:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.icon {
+  color: var(--accent);
+  transition: transform 200ms;
+}
+
+.link:hover .icon {
+  transform: scale(1.1);
+}
+
+.meta {
+  @apply min-w-0 flex-1;
+}
+
+.label {
+  @apply font-mono text-xs mb-0.5;
+  color: var(--c-muted);
+}
+
+.value {
+  @apply truncate text-sm font-medium;
+  color: var(--c-text);
+  transition: color 200ms;
+}
+
+.link:hover .value {
+  color: var(--accent);
+}
+
+.arrow {
+  @apply ml-auto shrink-0;
+  color: var(--c-muted);
+  transition: color 200ms;
+}
+
+.link:hover .arrow {
+  color: var(--accent);
+}

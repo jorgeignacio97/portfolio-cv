@@ -1,26 +1,26 @@
-import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/layout/NavBar";
+import type { Metadata } from 'next'
+import { Outfit, JetBrains_Mono } from 'next/font/google'
+import './globals.css'
+import NavBar from '@/components/layout/NavBar'
 
 const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
+})
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: "Jorge González | Desarrollador Full Stack",
+  title: 'Jorge González | Desarrollador Full Stack',
   description:
-    "Desarrollador Full Stack con 5 años de experiencia en sistemas institucionales. Especializado en PHP/Yii2, React, TypeScript y MySQL.",
-  authors: [{ name: "Jorge González" }],
-};
+    'Desarrollador Full Stack con 5 años de experiencia en sistemas institucionales. Especializado en PHP/Yii2, React, TypeScript y MySQL.',
+  authors: [{ name: 'Jorge González' }],
+}
 
 export default function RootLayout({
   children,
@@ -30,17 +30,17 @@ export default function RootLayout({
       lang="es"
       className={`${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-base text-text">
+      <body className="bg-base text-text flex min-h-full flex-col">
         <NavBar />
         {children}
-        <footer className="py-8 px-6 border-t border-overlay text-center">
+        <footer className="border-overlay border-t px-6 py-8 text-center">
           <p className="text-subtext font-mono text-xs">
-            © 2026 Jorge González · Construido con{" "}
-            <span className="text-blue">Next.js</span> &{" "}
+            © 2026 Jorge González · Construido con{' '}
+            <span className="text-blue">Next.js</span> &{' '}
             <span className="text-purple">Tailwind CSS</span>
           </p>
         </footer>
       </body>
     </html>
-  );
+  )
 }

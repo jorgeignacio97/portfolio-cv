@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.wrapper {
+  @apply mb-12;
+}
+
+.title {
+  @apply text-3xl font-bold mb-1;
+  color: var(--c-text);
+}
+
+.hash {
+  color: var(--c-accent);
+}
+
+.subtitle {
+  @apply font-mono text-sm mt-1;
+  color: var(--c-muted);
+}
+
+.line {
+  @apply h-px w-20 rounded-full mt-3;
+  background: linear-gradient(to right, var(--c-accent), var(--c-accent-alt));
+}

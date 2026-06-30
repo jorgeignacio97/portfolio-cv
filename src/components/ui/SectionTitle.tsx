@@ -1,18 +1,18 @@
+import styles from './SectionTitle.module.css'
+
 interface SectionTitleProps {
-  title: string;
-  subtitle?: string;
+  title: string
+  subtitle?: string
 }
 
 export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
   return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-text mb-1">
-        <span className="text-blue">#</span> {title}
+    <div className={styles.wrapper}>
+      <h2 className={styles.title}>
+        <span className={styles.hash}>#</span> {title}
       </h2>
-      {subtitle && (
-        <p className="text-subtext font-mono text-sm mt-1">{subtitle}</p>
-      )}
-      <div className="mt-3 h-px w-20 bg-gradient-to-r from-blue to-purple rounded-full" />
+      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+      <div className={styles.line} />
     </div>
-  );
+  )
 }
