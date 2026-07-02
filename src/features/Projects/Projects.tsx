@@ -16,7 +16,7 @@ const projects: Project[] = [
       'Incorporación incremental de React + TypeScript en módulos clave (en vez de reescritura total), modernizando el frontend justo donde el stack legacy más dolía.',
     ],
     outcome:
-      'Módulos entregados de extremo a extremo con mejor experiencia de usuario y mantenibilidad frente al desarrollo anterior en JavaScript vanilla; plataforma en uso institucional con alcance en 6 facultades y 26 departamentos. Periodo 2021–2026, Universidad de La Frontera.',
+      'Módulos entregados de extremo a extremo con mejor experiencia de usuario y mantenibilidad frente al desarrollo anterior en JavaScript vanilla; plataforma en uso institucional con alcance en 6 facultades y 26 departamentos.',
     tech: [
       'PHP',
       'Yii2',
