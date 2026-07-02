@@ -1,11 +1,22 @@
-import { SectionTitle, ProjectCard } from '@/shared/ui'
+import { SectionTitle } from '@/shared/ui'
+import ProjectCaseStudy from './components/ProjectCaseStudy'
 import styles from './Projects.module.css'
+import type { Project } from './types'
 
-const projects = [
+const projects: Project[] = [
   {
     title: 'SIVi — Sistema Integrado de Vinculación Bidireccional',
-    description:
-      'Plataforma institucional para el registro, gestión y promoción de iniciativas de vinculación académica en la Universidad de La Frontera. Integra 6 facultades, 26 departamentos y socios estratégicos nacionales e internacionales. Desarrollada como proyecto principal con arquitectura full stack de alta complejidad.',
+    period: '2021 – 2026 · Universidad de La Frontera',
+    badge: 'Proyecto principal',
+    problem:
+      'Plataforma institucional para centralizar el registro, gestión y promoción de iniciativas de vinculación académica en la Universidad de La Frontera, con impacto en 6 facultades y 26 departamentos y socios estratégicos nacionales e internacionales, sobre un stack PHP/Yii2 legacy cuya escalabilidad y mantenibilidad limitaban la evolución del frontend.',
+    decisions: [
+      'Arquitectura PHP/Yii2 con modelos de datos complejos sobre MySQL y Sybase ASE, uso intensivo de procedimientos almacenados, WebSockets y APIs REST.',
+      'Equipo de 4 desarrolladores; desarrollo de módulos completos de extremo a extremo: interfaces responsivas, lógica de negocio y optimización de consultas SQL.',
+      'Incorporación incremental de React + TypeScript en módulos clave (en vez de reescritura total), modernizando el frontend justo donde el stack legacy más dolía.',
+    ],
+    outcome:
+      'Módulos entregados de extremo a extremo con mejor experiencia de usuario y mantenibilidad frente al desarrollo anterior en JavaScript vanilla; plataforma en uso institucional con alcance en 6 facultades y 26 departamentos.',
     tech: [
       'PHP',
       'Yii2',
@@ -17,26 +28,6 @@ const projects = [
       'REST API',
       'JavaScript',
     ],
-    highlight: true,
-    badge: 'Proyecto principal',
-    period: '2021 – 2026 · Universidad de La Frontera',
-  },
-  {
-    title: 'App React + Material UI',
-    description:
-      'Aplicación web desarrollada con React y Material UI. Proyecto de exploración de componentes de librería y gestión de estado en frontend moderno con enfoque en usabilidad.',
-    tech: ['React', 'Material UI', 'JavaScript', 'CSS'],
-    highlight: false,
-    period: 'Proyecto personal',
-  },
-  {
-    title: 'Próximamente...',
-    description:
-      'Nuevos proyectos en desarrollo. Explorando Next.js, TypeScript y más herramientas del ecosistema moderno de frontend y backend.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    highlight: false,
-    badge: 'En desarrollo',
-    period: '',
   },
 ]
 
@@ -47,7 +38,7 @@ export default function Projects() {
         <SectionTitle title="Proyectos" subtitle="// trabajo.destacado" />
         <div className={styles.grid}>
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCaseStudy key={project.title} project={project} />
           ))}
         </div>
       </div>
