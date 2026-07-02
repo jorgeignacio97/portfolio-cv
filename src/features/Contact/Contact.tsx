@@ -6,7 +6,7 @@ import {
   ArrowRightIcon,
 } from '@phosphor-icons/react/dist/ssr'
 import { SectionTitle } from '@/shared/ui'
-import { CV_DOWNLOAD_PATH, CV_FILE_LABEL } from '@/config/cv'
+import { CV_DOWNLOAD_PATH } from '@/config/cv'
 import styles from './Contact.module.css'
 
 type ColorKey = 'blue' | 'purple' | 'green'
@@ -43,8 +43,8 @@ const contactLinks: Array<{
     Icon: PhoneIcon,
   },
   {
-    label: CV_FILE_LABEL,
-    value: 'CV en PDF',
+    label: 'CV',
+    value: 'Descargar PDF',
     href: CV_DOWNLOAD_PATH,
     color: 'blue',
     download: true,
