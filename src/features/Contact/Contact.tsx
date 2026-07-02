@@ -2,9 +2,11 @@ import {
   EnvelopeSimpleIcon,
   GithubLogoIcon,
   PhoneIcon,
+  DownloadSimpleIcon,
   ArrowRightIcon,
 } from '@phosphor-icons/react/dist/ssr'
 import { SectionTitle } from '@/shared/ui'
+import { CV_DOWNLOAD_PATH, CV_FILE_LABEL } from '@/config/cv'
 import styles from './Contact.module.css'
 
 type ColorKey = 'blue' | 'purple' | 'green'
@@ -15,6 +17,7 @@ const contactLinks: Array<{
   href: string
   color: ColorKey
   external?: boolean
+  download?: boolean
   Icon: React.ElementType
 }> = [
   {
@@ -39,6 +42,14 @@ const contactLinks: Array<{
     color: 'green',
     Icon: PhoneIcon,
   },
+  {
+    label: CV_FILE_LABEL,
+    value: 'CV en PDF',
+    href: CV_DOWNLOAD_PATH,
+    color: 'blue',
+    download: true,
+    Icon: DownloadSimpleIcon,
+  },
 ]
 
 export default function Contact() {
@@ -51,24 +62,27 @@ export default function Contact() {
           escribirme.
         </p>
         <div className={styles.list}>
-          {contactLinks.map(({ label, value, href, color, external, Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={external ? '_blank' : undefined}
-              rel={external ? 'noopener noreferrer' : undefined}
-              className={`${styles.link} ${styles[color]}`}
-            >
-              <span className={styles.icon}>
-                <Icon size={20} weight="duotone" />
-              </span>
-              <div className={styles.meta}>
-                <p className={styles.label}>{label}</p>
-                <p className={styles.value}>{value}</p>
-              </div>
-              <ArrowRightIcon size={16} className={styles.arrow} />
-            </a>
-          ))}
+          {contactLinks.map(
+            ({ label, value, href, color, external, download, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+                download={download}
+                className={`${styles.link} ${styles[color]}`}
+              >
+                <span className={styles.icon}>
+                  <Icon size={20} weight="duotone" />
+                </span>
+                <div className={styles.meta}>
+                  <p className={styles.label}>{label}</p>
+                  <p className={styles.value}>{value}</p>
+                </div>
+                <ArrowRightIcon size={16} className={styles.arrow} />
+              </a>
+            )
+          )}
         </div>
       </div>
     </section>

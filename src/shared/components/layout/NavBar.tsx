@@ -6,10 +6,7 @@ import styles from './NavBar.module.css'
 
 const navLinks = [
   { href: '#sobre-mi', label: 'Sobre mí' },
-  { href: '#habilidades', label: 'Habilidades' },
-  { href: '#experiencia', label: 'Experiencia' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '#educacion', label: 'Educación' },
   { href: '#contacto', label: 'Contacto' },
 ]
 

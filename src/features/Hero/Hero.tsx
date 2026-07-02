@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CaretDown, GithubLogo } from '@phosphor-icons/react/dist/ssr'
+import { CV_DOWNLOAD_PATH, CV_FILE_LABEL } from '@/config/cv'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -18,7 +19,10 @@ export default function Hero() {
               extremo.
             </p>
             <div className={styles.actions}>
-              <a href="#proyectos" className={styles.btnPrimary}>
+              <a href={CV_DOWNLOAD_PATH} download className={styles.btnPrimary}>
+                {CV_FILE_LABEL}
+              </a>
+              <a href="#proyectos" className={styles.btnContact}>
                 Ver proyectos
               </a>
               <a
@@ -54,7 +58,11 @@ export default function Hero() {
         </div>
 
         <div className={styles.scrollCue}>
-          <a href="#sobre-mi" className={styles.scrollLink} aria-label="Ir a Sobre mí">
+          <a
+            href="#sobre-mi"
+            className={styles.scrollLink}
+            aria-label="Ir a Sobre mí"
+          >
             <CaretDown size={24} weight="bold" />
           </a>
         </div>
