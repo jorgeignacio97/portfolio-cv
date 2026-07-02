@@ -8,12 +8,8 @@
   @apply mx-auto max-w-6xl;
 }
 
-.grid {
-  @apply grid items-center gap-12 md:grid-cols-2;
-}
-
 .textBlock {
-  @apply space-y-4;
+  @apply mx-auto max-w-3xl space-y-4;
 }
 
 .para {
@@ -36,26 +32,11 @@
   color: var(--c-accent-alt);
 }
 
-.statsGrid {
-  @apply grid grid-cols-2 gap-4;
-}
-
-.statCard {
-  @apply rounded-xl border p-5 text-center transition-colors duration-200;
-  background-color: var(--c-bg-raised);
-  border-color: var(--c-border);
-}
-
-.statCard:hover {
-  border-color: color-mix(in srgb, var(--c-accent) 30%, transparent);
-}
-
-.statValue {
-  @apply text-2xl font-bold mb-1;
+.link {
+  @apply font-medium underline underline-offset-4 transition-colors duration-200;
   color: var(--c-accent);
 }
 
-.statLabel {
-  @apply font-mono text-xs;
-  color: var(--c-muted);
+.link:hover {
+  color: var(--c-accent-alt);
 }
